@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "What To Compose",
+  "name": "What To Compose - Random Composition Assignment Generator",
   "icons": [
     {
       "src": "favicon.ico",

@@ -1,0 +1,10 @@
+.tone-image { 
+    width: auto;
+    height: 300px;
+    max-width: 500px;
+    display: block;
+}
+
+.checkbox-holder {
+    margin-bottom: 30px;
+}
