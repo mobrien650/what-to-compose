@@ -66,8 +66,10 @@ function getRandom(limit) {
 }
 
 /* Vars */
-const keys = ['C', 'G', 'D', 'A', 'E', 'B', 'F#', 'Db', 'Ab', 'Eb', 'Bb', 'F', 
-              'Am', 'Em', 'Bm', 'F#m', 'C#m', 'G#m', 'D#m', 'Bbm', 'Fm', 'Cm', 'Gm', 'Dm']
+const keys = ['C Major', 'G Major', 'D Major', 'A Major', 'E Major', 'B Major', 'F# Major', 
+              'Db  Major', 'Ab  Major', 'Eb  Major', 'Bb  Major', 'F  Major', 
+              'A Minor', 'E  Minor', 'B  Minor', 'F#  Minor', 'C#  Minor', 'G#  Minor', 
+              'D#  Minor', 'Bb  Minor', 'F  Minor', 'C  Minor', 'G  Minor', 'D  Minor']
 
 const basicTimeSignatures = ['3/4', '4/4', '6/8']
 const timeSignatures = ['2/4', '5/4', '6/8', '9/8', '7/8', '5/8', '12/8', '6/4', '2/2']
@@ -81,7 +83,7 @@ const songForms = ['Binary Form (AB)', 'Ternary Form (ABA)']
 
 const phrases = ['Period', 'Sentence']
 
-const harmonies = ['Modal Interchange', 'Secondary Dominants', 'Strict Functional Harmony', 'Mode', 'Line Cliche',
+const harmonies = ['Modal Interchange', 'Secondary Dominants', 'Strict Functional Harmony', 'Strict Diatonic Harmony', 'Mode', 'Line Cliche',
 'Tertiary Harmony', '7th Chords', 'Extended Chords', 'II-V-I progressions', 'Diminshed Chord Cadence', 'Passing Chords']
 
 const intervals = ['3rds', '4ths', '5ths', '6ths', '7ths', 'octaves', '9ths']
