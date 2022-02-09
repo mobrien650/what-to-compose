@@ -1,8 +1,92 @@
+/* Typography */
+
 body {
   margin: 20px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.music-notation {
+  font-family: 'Noto Music', sans-serif;
+}
+
+/* Variables */
+
+/* Base */
+
+body {
+  margin: 2em;
+}
+
+button {
+  background: DarkCyan;
+  border: 1px solid DarkCyan;
+  border-radius: 4px;
+  color: White;
+  margin: 0;
+  padding: .3em .5em;
+}
+
+/* Header */
+
+.header-title {
+  display: flex;
+  align-items: center;
+}
+
+/* Options */
+
+.checkbox-holder {
+  border: 1px solid PaleTurquoise;
+  padding: 1em;
+}
+
+.check-box input  {
+  margin-right: .3em;
+}
+
+/* List */
+
+.song-requirements {
+  border: 1px solid PaleTurquoise;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0px;
+  padding: 1em;
+}
+
+.song-requirements > li {
+  background: rgba(175,238,238,.2);
+}
+
+.song-requirements li {
+  border-radius: 4px;
+  flex: 0 0 calc(50% - 2em);
+  margin: .5em;
+  padding: .5em;
+}
+
+.option-title {
+  font-weight: bold;
+  margin-right: .2em;
+}
+
+.song-requirements ul {
+  padding: 0 0 0 1.5em;
+}
+
+.song-requirements .tone-image {
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 100%;
+}
+
+.song-requirements .tone-image img {
+  border-radius: 4px;
 }
