@@ -56,7 +56,7 @@ class RandomizeScreenViewModel extends DefaultViewModel {
             restoreDate: null,
             harmonic: oldState.harmonic !== undefined  ? oldState.harmonic : true,
             melodic: oldState.melodic !== undefined  ? oldState.melodic : true,
-            advancedMeter: oldState.advancedMeter !== undefined ? oldState.advancedMeter : true,
+            advancedMeter: oldState.advancedMeter !== undefined ? oldState.advancedMeter : false,
             fullSong: oldState.fullSong !== undefined ? oldState.fullSong : false,
         }
 
