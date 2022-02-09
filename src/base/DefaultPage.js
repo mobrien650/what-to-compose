@@ -11,7 +11,7 @@ export class DefaultViewModel {
 
     reduce(state, action) {
         if(this.actionMappings[action.type]) {
-            return this.actionMappings[action.type].call(this, state, action.payload)
+            return this.actionMappings[action.type].call(this, {...state}, action.payload)
         } else {
             throw new Error("Unhandled Action Received")
         }

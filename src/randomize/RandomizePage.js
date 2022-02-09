@@ -141,7 +141,7 @@ export default function RandomizeScreen(props) {
                 </div>
                 {/* {state.restoreDate != null ? <p>Restore data from {state.restoreDate.split("T")[0]}</p> : null} */}
                 <p>Compose a {state.fullSong ? "song" : "theme"} with:</p>
-                <ul class="song-requirements">
+                <ul className="song-requirements">
                     {state.fullSong ? <li><span className="option-title">Song Form:</span>{state.songForm}</li> : null }
                     <li>
                         <span className="option-title">Phrase Form:</span>
