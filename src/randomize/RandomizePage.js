@@ -141,20 +141,20 @@ export default function RandomizeScreen(props) {
                 </div>
                 {/* {state.restoreDate != null ? <p>Restore data from {state.restoreDate.split("T")[0]}</p> : null} */}
                 <p>Compose a {state.fullSong ? "song" : "theme"} with:</p>
-                <ul>
-                    {state.fullSong ? <li>Song Form: {state.songForm}</li> : null }
+                <ul class="song-requirements">
+                    {state.fullSong ? <li><span className="option-title">Song Form:</span>{state.songForm}</li> : null }
                     <li>
-                        Phrase Form:
-                        <ul>
+                        <span className="option-title">Phrase Form:</span>
+                        { state.fullSong ? <ul>
                             <li>{state.fullSong ? "Section A:" : null} {state.themeForm[0]}</li>
                             {state.fullSong && state.themeForm.length > 1 ? <li>Section B: {state.themeForm[1]}</li> : null}
-                        </ul>
+                        </ul> : ` ${state.themeForm[0]} ` }
                     </li>
-                    <li>Tempo: {state.tempo} in {state.advancedMeter ? state.meter : state.simple} </li>
-                    <li>Music Key: {state.key} </li>
-                    {state.harmonic ? <li>Harmony Element: {state.extras.harmony} </li> : null }
-                    {state.melodic ? <li>Key Interval: {state.extras.interval} </li> : null }
-                    <li>Tone Image: <a target="_blank" rel="noreferrer" href={state.toneImage}><img alt="Tone for Composition" src={state.toneImage} className='tone-image' /></a> </li>
+                    <li><span className="option-title">Tempo:</span>{state.tempo} in {state.advancedMeter ? state.meter : state.simple} </li>
+                    <li><span className="option-title">Music Key:</span>{state.key} </li>
+                    {state.harmonic ? <li><span className="option-title">Key Harmony Element:</span>{state.extras.harmony} </li> : null }
+                    {state.melodic ? <li><span className="option-title">Key Interval:</span>{state.extras.interval} </li> : null }
+                    <li className="tone-image"><span className="option-title">Tone Image:</span><a target="_blank" rel="noreferrer" href={state.toneImage}><img alt="Tone for Composition" src={state.toneImage} className='tone-image' /></a> </li>
                 </ul>
             </div>
         </>
