@@ -4,22 +4,15 @@ export default class Randomizer {
     }
 
     getThemeForm(form) {
-        if(form === songForms[0] || form === songForms[1]) {
+        if(songForms.includes(form)) {
             return [getRandomFromArray(phrases), getRandomFromArray(phrases)]
         } else {
             return [getRandomFromArray(phrases)]
         }
     }
 
-
     getTempo() {
-        const path = getRandom(2)
-        if(path === 0) {
-            const tempo = getRandom(110) + 50;
-            return `${tempo}bpm`
-        } else {
-            return getRandomFromArray(tempos)
-        }
+        return `${getRandom(110) + 50}bpm`
     }
 
     getMeter() {
@@ -38,7 +31,6 @@ export default class Randomizer {
         const extras = {}
 
         extras.harmony = getRandomFromArray(harmonies)
-
         extras.interval = getRandomFromArray(intervals)
 
         if(extras.harmony === 'Mode') {
@@ -73,11 +65,6 @@ const keys = ['C Major', 'G Major', 'D Major', 'A Major', 'E Major', 'B Major', 
 
 const basicTimeSignatures = ['3/4', '4/4', '6/8']
 const timeSignatures = ['2/4', '5/4', '6/8', '9/8', '7/8', '5/8', '12/8', '6/4', '2/2']
-
-const tempos = ['Lento (~60bpm)', 'Adagio (~66bpm)', 'Maestoso (~70bpm)', 'Nobilmente (~72bpm)', 
-'Andante (~80bpm)', 'Andantino (~92bpm)', 'Eroico (~96bpm)', 'Moderato (~108bpm)', 
-'Allegretto (~112bpm)', 'Allegro Moderato (~120bpm)', 'Giocoso (~132bpm)', 'Allegro (~140bpm)', 
-'Energico (~144bpm)', 'Vivace (~160bpm)']
 
 const songForms = ['Binary Form (AB)', 'Ternary Form (ABA)']
 

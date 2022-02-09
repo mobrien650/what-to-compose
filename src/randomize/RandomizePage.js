@@ -9,14 +9,13 @@ import Checkbox from './checkbox/Checkbox';
 import './RandomizePage.css'
 
 // TODO: 
-// Dont likes: The tempo should be able to be limited to 'common' tempos
-//             Better interval elements in array
+//  - Better interval elements in array
 
 // Actions - Clunky?
 const RandomizeValues = 'randomize-values';
 const UpdateCheckbox = 'update-checkbox';
 
-// Label Names
+// Label Names - To Strings Const File
 const harmonic = "Harmonic Requirement"
 const melodic = "Melodic Requirement"
 const advancedMeter = "Allow Advanced Meters"
@@ -38,12 +37,14 @@ class RandomizeScreenViewModel extends DefaultViewModel {
             return existingState
         } else {
             return { 
-                ...this.randomizeStateValues({})             
+                ...this.randomizeStateValues()             
             }
         }
     }
 
-    randomizeStateValues(oldState) {
+    randomizeStateValues(existingState) {
+        const oldState = existingState ? existingState : {}
+
         const songForm = this.randomizer.getSongForm()
         const state = {
             songForm,
@@ -127,6 +128,7 @@ export default function RandomizeScreen(props) {
         dispatch(build(UpdateCheckbox, {label, isChecked}))
     }
 
+    // Pulls Strings out to Const file
     return (
         <>
             <div>
@@ -137,7 +139,7 @@ export default function RandomizeScreen(props) {
                     <Checkbox label={fullSong} isChecked={state.fullSong} onToggle={onToggle}/>
                     <button onClick={() => dispatch(build(RandomizeValues))}>Generate</button>
                 </div>
-                {state.restoreDate != null ? <p>Restore data from {state.restoreDate.split("T")[0]}</p> : null}
+                {/* {state.restoreDate != null ? <p>Restore data from {state.restoreDate.split("T")[0]}</p> : null} */}
                 <p>Compose a {state.fullSong ? "song" : "theme"} with:</p>
                 <ul>
                     {state.fullSong ? <li>Song Form: {state.songForm}</li> : null }
@@ -150,7 +152,7 @@ export default function RandomizeScreen(props) {
                     </li>
                     <li>Tempo: {state.tempo} in {state.advancedMeter ? state.meter : state.simple} </li>
                     <li>Music Key: {state.key} </li>
-                    {state.harmonic ? <li>Key Harmony Element: {state.extras.harmony} </li> : null }
+                    {state.harmonic ? <li>Harmony Element: {state.extras.harmony} </li> : null }
                     {state.melodic ? <li>Key Interval: {state.extras.interval} </li> : null }
                     <li>Tone Image: <a target="_blank" rel="noreferrer" href={state.toneImage}><img alt="Tone for Composition" src={state.toneImage} className='tone-image' /></a> </li>
                 </ul>
