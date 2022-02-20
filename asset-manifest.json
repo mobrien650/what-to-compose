@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/what-to-compose/static/css/main.d1dfd8e5.css",
-    "main.js": "/what-to-compose/static/js/main.99c39385.js",
+    "main.js": "/what-to-compose/static/js/main.d69cc40f.js",
     "index.html": "/what-to-compose/index.html",
     "main.d1dfd8e5.css.map": "/what-to-compose/static/css/main.d1dfd8e5.css.map",
-    "main.99c39385.js.map": "/what-to-compose/static/js/main.99c39385.js.map"
+    "main.d69cc40f.js.map": "/what-to-compose/static/js/main.d69cc40f.js.map"
   },
   "entrypoints": [
     "static/css/main.d1dfd8e5.css",
-    "static/js/main.99c39385.js"
+    "static/js/main.d69cc40f.js"
   ]
 }
