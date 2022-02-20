@@ -10,6 +10,7 @@ import './RandomizePage.css'
 
 // TODO: 
 //  - Better interval elements in array
+//  - Syncopation element (1st beat, 3rd beat, down beat, anticipations, suspensions)
 
 // Actions - Clunky?
 const RandomizeValues = 'randomize-values';
@@ -128,7 +129,6 @@ export default function RandomizeScreen(props) {
         dispatch(build(UpdateCheckbox, {label, isChecked}))
     }
 
-    // Pulls Strings out to Const file
     return (
         <>
             <div>
@@ -150,10 +150,10 @@ export default function RandomizeScreen(props) {
                             {state.fullSong && state.themeForm.length > 1 ? <li>Section B: {state.themeForm[1]}</li> : null}
                         </ul> : ` ${state.themeForm[0]} ` }
                     </li>
-                    <li><span className="option-title">Tempo:</span>{state.tempo} in {state.advancedMeter ? state.meter : state.simple} </li>
+                    <li><span className="option-title">Tempo:</span>~{state.tempo} in {state.advancedMeter ? state.meter : state.simple} </li>
                     <li><span className="option-title">Music Key:</span>{state.key} </li>
-                    {state.harmonic ? <li><span className="option-title">Key Harmony Element:</span>{state.extras.harmony} </li> : null }
-                    {state.melodic ? <li><span className="option-title">Key Interval:</span>{state.extras.interval} </li> : null }
+                    {state.harmonic ? <li><span className="option-title">Key Harmonic Element:</span>{state.extras.harmony} </li> : null }
+                    {state.melodic ? <li> { getIntervalsSection(state.extras) }</li> : null }
                     <li className="tone-image"><span className="option-title">Tone Image:</span><a target="_blank" rel="noreferrer" href={state.toneImage}><img alt="Tone for Composition" src={state.toneImage} className='tone-image' /></a> </li>
                 </ul>
             </div>
@@ -161,3 +161,22 @@ export default function RandomizeScreen(props) {
     )
 }
 
+function getIntervalsSection(extras) {
+    const sections = []
+    sections.push(
+        <> 
+            <span className="option-title">Primary Interval:</span> {extras.interval}
+        </>
+    )
+
+    if(extras.secondaryInterval) {
+        sections.push(
+            <> 
+                <br/>
+                <span className="option-title">Secondary Interval:</span> {extras.secondaryInterval}
+            </>
+        ) 
+    }
+
+    return sections
+}

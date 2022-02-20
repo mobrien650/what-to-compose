@@ -32,6 +32,11 @@ export default class Randomizer {
 
         extras.harmony = getRandomFromArray(harmonies)
         extras.interval = getRandomFromArray(intervals)
+        extras.secondaryInterval = getRandomFromArray(intervals)
+
+        while(extras.interval === extras.secondaryInterval) {
+            extras.secondaryInterval = getRandomFromArray(intervals)
+        }
 
         if(extras.harmony === 'Mode') {
             extras.harmony = "The " + getRandomFromArray(modes) + " mode"
@@ -71,7 +76,7 @@ const songForms = ['Binary Form (AB)', 'Ternary Form (ABA)']
 const phrases = ['Period', 'Sentence']
 
 const harmonies = ['Modal Interchange', 'Secondary Dominants', 'Strict Functional Harmony', 'Strict Diatonic Harmony', 'Mode', 'Line Cliche',
-'Tertiary Harmony', '7th Chords', 'Extended Chords', 'II-V-I progressions', 'Passing Chords']
+'Tertian Harmony', '7th Chords', 'Extended Chords', 'II-V-I progression', 'Passing Chords', 'Hybrid Chords', 'Inverted Chords', 'Suspended Chords']
 
 const intervals = ['3rds', '4ths', '5ths', '6ths', '7ths', 'octaves', '9ths']
 
