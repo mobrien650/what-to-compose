@@ -71,7 +71,7 @@ const songForms = ['Binary Form (AB)', 'Ternary Form (ABA)']
 const phrases = ['Period', 'Sentence']
 
 const harmonies = ['Modal Interchange', 'Secondary Dominants', 'Strict Functional Harmony', 'Strict Diatonic Harmony', 'Mode', 'Line Cliche',
-'Tertiary Harmony', '7th Chords', 'Extended Chords', 'II-V-I progressions', 'Diminshed Chord Cadence', 'Passing Chords']
+'Tertiary Harmony', '7th Chords', 'Extended Chords', 'II-V-I progressions', 'Passing Chords']
 
 const intervals = ['3rds', '4ths', '5ths', '6ths', '7ths', 'octaves', '9ths']
 
