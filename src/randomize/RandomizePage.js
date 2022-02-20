@@ -162,21 +162,15 @@ export default function RandomizeScreen(props) {
 }
 
 function getIntervalsSection(extras) {
-    const sections = []
-    sections.push(
+    return (
         <> 
             <span className="option-title">Primary Interval:</span> {extras.interval}
+            { extras.secondaryInterval ? (
+            <>
+                <br/>
+                <span className="option-title" key="secondary-interval">Secondary Interval:</span> {extras.secondaryInterval}
+            </>
+            ) : null }
         </>
     )
-
-    if(extras.secondaryInterval) {
-        sections.push(
-            <> 
-                <br/>
-                <span className="option-title">Secondary Interval:</span> {extras.secondaryInterval}
-            </>
-        ) 
-    }
-
-    return sections
 }
