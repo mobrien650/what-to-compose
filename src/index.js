@@ -9,5 +9,3 @@ ReactDOM.render(
   <RandomizePage />,
   document.getElementById('root')
 );
-
-console.log("Version New!")
