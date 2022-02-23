@@ -1,7 +1,7 @@
 {
   "name": "what-to-compose",
   "version": "0.1.0",
-  "homepage": "https://mobrien650.github.io/",
+  "homepage": "https://mobrien650.github.io",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
