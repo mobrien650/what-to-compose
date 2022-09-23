@@ -10,7 +10,7 @@ import './RandomizePage.css'
 
 // TODO: 
 //  - Better interval elements in array
-//  - Syncopation element (1st beat, 3rd beat, down beat, anticipations, suspensions)
+//  - For an instruments? Starting with notes? Limited scale? Rescricted Rhytms?
 
 // Actions - Clunky?
 const RandomizeValues = 'randomize-values';
