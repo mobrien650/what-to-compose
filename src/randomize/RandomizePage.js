@@ -279,9 +279,9 @@ export default function RandomizeScreen(props) {
                         </li>
                 </ul>
                 <button className="share-button" onClick={shareState}>Share</button>
-                <div className={"share-confirmed" + (state.copied ? "" : "hidden")}>
+                {state.copied ? <div className="share-confirmed">
                     Saved to clipboard
-                </div>
+                </div> : null}
             </div>
         </div>
     )
