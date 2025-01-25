@@ -39,7 +39,7 @@ class RandomizeScreenViewModel extends DefaultViewModel {
     initialState() {
         const existingState = this.getState()
 
-        if(existingState?.songForm === true) {
+        if(existingState?.songForm) {
             return existingState
         } else {
             return {
@@ -67,7 +67,6 @@ class RandomizeScreenViewModel extends DefaultViewModel {
             };
         }
 
-        this.saveState(newState);
         return newState;
     }
 
@@ -99,7 +98,7 @@ class RandomizeScreenViewModel extends DefaultViewModel {
             ...existingState
         }
 
-        if(share && existingState?.restored === true) {
+        if(share && existingState?.restored) {
             window.location.href = BaseUrl;
         } else {
             const oldState = existingState ?? {}
