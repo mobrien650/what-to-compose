@@ -1,7 +1,8 @@
-.tone-image img { 
+.tone-image img {
     width: auto;
     height: 300px;
     max-width: 500px;
+    margin-bottom: 16px;
     display: block;
 }
 

@@ -41,7 +41,7 @@ export default class Randomizer {
         return getRandomFromArray(keys)
     }
 
-    getThemeExtras() {        
+    getThemeExtras() {
         const extras = {}
 
         extras.harmony = getRandomFromArray(harmonies)
@@ -77,9 +77,9 @@ function getRandom(limit) {
 }
 
 /* Vars */
-const keys = ['C Major', 'G Major', 'D Major', 'A Major', 'E Major', 'B Major', 'F# Major', 
-              'Db  Major', 'Ab  Major', 'Eb  Major', 'Bb  Major', 'F  Major', 
-              'A Minor', 'E  Minor', 'B  Minor', 'F#  Minor', 'C#  Minor', 'G#  Minor', 
+const keys = ['C Major', 'G Major', 'D Major', 'A Major', 'E Major', 'B Major', 'F# Major',
+              'Db  Major', 'Ab  Major', 'Eb  Major', 'Bb  Major', 'F  Major',
+              'A Minor', 'E  Minor', 'B  Minor', 'F#  Minor', 'C#  Minor', 'G#  Minor',
               'D#  Minor', 'Bb  Minor', 'F  Minor', 'C  Minor', 'G  Minor', 'D  Minor']
 
 const basicTimeSignatures = ['3/4', '4/4', '6/8']
@@ -92,13 +92,13 @@ const phrases = ['Period', 'Sentence']
 const harmonies = ['Modal Interchange', 'Secondary Dominants', 'Strict Functional Harmony', 'Strict Diatonic Harmony', 'Mode', 'Line Cliche',
 'Tertian Harmony', '7th Chords', 'Extended Chords', 'II-V-I progression', 'Passing Chords', 'Hybrid Chords', 'Inverted Chords', 'Suspended Chords']
 
-const intervals = ['3rds', '4ths', '5ths', '6ths', '7ths', 'octaves', '9ths']
+const intervals = ['3rds', '4ths', '5ths', '6ths', '7ths', 'Octaves', '9ths']
 
 const modes = ['Lydian', 'Ionian', 'Mixolydian', 'Dorian', 'Aeolian', 'Phrygian', 'Locrian']
 
 const photos = [
-    'https://cdn.pixabay.com/photo/2019/11/14/21/12/village-4627131_1280.jpg', 
-    'https://cdn.pixabay.com/photo/2020/08/15/06/03/earth-5489719_1280.jpg', 
+    'https://cdn.pixabay.com/photo/2019/11/14/21/12/village-4627131_1280.jpg',
+    'https://cdn.pixabay.com/photo/2020/08/15/06/03/earth-5489719_1280.jpg',
     'https://cdn.pixabay.com/photo/2018/04/15/19/56/fantasy-3322691_1280.jpg',
     'https://cdn.pixabay.com/photo/2021/03/04/11/13/beautifull-morning-in-village-6067691_1280.jpg',
     'https://cdn.pixabay.com/photo/2018/01/12/10/19/fantasy-3077928_1280.jpg',
@@ -360,5 +360,5 @@ const photos = [
     'https://images.unsplash.com/photo-1514043016-1076e5413b11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2348&q=80',
     'https://images.unsplash.com/photo-1603270504031-4344a08b28b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80',
     'https://images.unsplash.com/photo-1515112954428-fce1b0c3f4e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80',
-    
+
 ]

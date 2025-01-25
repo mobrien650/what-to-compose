@@ -51,22 +51,26 @@ button {
 /* List */
 
 .song-requirements {
-  border: 1px solid PaleTurquoise;
-  display: flex;
-  flex-wrap: wrap;
+  text-align: center;
   list-style-type: none;
   margin: 0px;
+  background: PaleTurquoise;
   padding: 1em;
 }
 
+.song-content {
+  border: 1px solid PaleTurquoise;
+  position: relative;
+}
+
 .song-requirements > li {
-  background: rgba(175,238,238,.2);
+
 }
 
 .song-requirements li {
   border-radius: 4px;
   flex: 0 0 calc(50% - 2em);
-  margin: .5em;
+  margin: .5em .5em .75em;
   padding: .5em;
 }
 
@@ -89,4 +93,18 @@ button {
 
 .song-requirements .tone-image img {
   border-radius: 4px;
+}
+
+.share-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.share-confirmed {
+  position: absolute;
+  top: 42px;
+  right: 8px;
+  padding: 8px;
+  background: rgb(247, 247, 247);
 }
